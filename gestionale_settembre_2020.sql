@@ -1,7 +1,7 @@
 -- MySQL Administrator dump 1.4
 --
 -- ------------------------------------------------------
--- Server version	5.5.5-10.1.9-MariaDB
+-- Server version	5.7.25-log
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -18,11 +18,11 @@
 -- Create schema gestionale_sett2020
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ gestionale_sett2020;
+CREATE DATABASE IF NOT EXISTS gestionale_sett2020;
 USE gestionale_sett2020;
 
 --
--- Table structure for table `gestionale_sett2020`.`comande`
+-- Definition of table `comande`
 --
 
 DROP TABLE IF EXISTS `comande`;
@@ -54,7 +54,7 @@ CREATE TABLE `comande` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `gestionale_sett2020`.`comande`
+-- Dumping data for table `comande`
 --
 
 /*!40000 ALTER TABLE `comande` DISABLE KEYS */;
@@ -62,7 +62,7 @@ CREATE TABLE `comande` (
 
 
 --
--- Table structure for table `gestionale_sett2020`.`composizionemenu`
+-- Definition of table `composizionemenu`
 --
 
 DROP TABLE IF EXISTS `composizionemenu`;
@@ -78,7 +78,7 @@ CREATE TABLE `composizionemenu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `gestionale_sett2020`.`composizionemenu`
+-- Dumping data for table `composizionemenu`
 --
 
 /*!40000 ALTER TABLE `composizionemenu` DISABLE KEYS */;
@@ -94,8 +94,7 @@ INSERT INTO `composizionemenu` (`menu`,`portata`,`data_creazione`,`data_aggiorna
  ('Cantinetta','Crescia con erba e salsiccia','2020-08-25 21:57:19','2020-08-25 21:57:19'),
  ('Cantinetta','Crescia con formaggio','2020-08-25 21:57:19','2020-08-25 21:57:19'),
  ('Cantinetta','Crescia con prosciutto','2020-08-25 21:57:19','2020-08-25 21:57:19'),
- ('Cantinetta','Crescia con prosciutto e rucola','2020-08-25 21:57:19','2020-08-25 21:57:19');
-INSERT INTO `composizionemenu` (`menu`,`portata`,`data_creazione`,`data_aggiornamento`) VALUES 
+ ('Cantinetta','Crescia con prosciutto e rucola','2020-08-25 21:57:19','2020-08-25 21:57:19'),
  ('Cantinetta','Crescia con prosciutto e scamorza','2020-08-25 21:57:19','2020-08-25 21:57:19'),
  ('Cantinetta','Crescia con prosciutto, stracchino e rucola','2020-08-25 21:57:19','2020-08-25 21:57:19'),
  ('Cantinetta','Crescia con salame piccante, stracchino','2020-08-25 21:57:19','2020-08-25 21:57:19'),
@@ -106,8 +105,7 @@ INSERT INTO `composizionemenu` (`menu`,`portata`,`data_creazione`,`data_aggiorna
  ('Cantinetta','Crescia stracchino e prosciutto','2020-08-25 21:57:19','2020-08-25 21:57:19'),
  ('Cantinetta','Crescia stracchino e rucola','2020-08-25 21:57:19','2020-08-25 21:57:19'),
  ('Cantinetta','Montefalco Rosso 2016 Milziade Antano','2020-08-25 21:57:19','2020-08-25 21:57:19'),
- ('Cantinetta','Montefalco Rosso 2016 Milziade Antano calice','2020-08-25 21:57:19','2020-08-25 21:57:19');
-INSERT INTO `composizionemenu` (`menu`,`portata`,`data_creazione`,`data_aggiornamento`) VALUES 
+ ('Cantinetta','Montefalco Rosso 2016 Milziade Antano calice','2020-08-25 21:57:19','2020-08-25 21:57:19'),
  ('Cantinetta','Pane e Coperto','2020-08-25 21:57:19','2020-08-25 21:57:19'),
  ('Cantinetta','Prosecco','2020-08-25 21:57:19','2020-08-25 21:57:19'),
  ('Cantinetta','Prosecco calice','2020-08-25 21:57:19','2020-08-25 21:57:19'),
@@ -119,8 +117,7 @@ INSERT INTO `composizionemenu` (`menu`,`portata`,`data_creazione`,`data_aggiorna
  ('Standard','Bocconcini di Vitello ai funghi misti del bosco','2019-08-29 00:06:57','2019-08-29 00:06:57'),
  ('Standard','Bruschetta ai fichi con Prosciutto di Norcia IGP','2019-08-29 00:06:57','2019-08-29 00:06:57'),
  ('Standard','Bruschetta all olio EVO Bio Clarici con prosciutto di Norcia IGP','2019-08-29 00:06:57','2019-08-29 00:06:57'),
- ('Standard','Bruschetta con Ciauscolo e Pecorino','2019-08-29 00:06:57','2019-08-29 00:06:57');
-INSERT INTO `composizionemenu` (`menu`,`portata`,`data_creazione`,`data_aggiornamento`) VALUES 
+ ('Standard','Bruschetta con Ciauscolo e Pecorino','2019-08-29 00:06:57','2019-08-29 00:06:57'),
  ('Standard','Cheesecake','2019-08-29 00:06:57','2019-08-29 00:06:57'),
  ('Standard','Coratella di agnello con crescia','2019-08-29 00:06:57','2019-08-29 00:06:57'),
  ('Standard','Erba spadellata','2019-08-29 00:06:57','2019-08-29 00:06:57'),
@@ -130,8 +127,7 @@ INSERT INTO `composizionemenu` (`menu`,`portata`,`data_creazione`,`data_aggiorna
  ('Standard','GF Bruschetta ai fichi con Prosciutto di Norcia IGP','2019-08-29 00:18:45','2019-08-29 00:18:45'),
  ('Standard','GF Bruschetta all olio EVO Bio Clarici con prosciutto di Norcia IGP','2019-08-29 00:18:45','2019-08-29 00:18:45'),
  ('Standard','GF Bruschetta con Ciauscolo e Pecorino','2019-08-29 00:06:57','2019-08-29 00:06:57'),
- ('Standard','GF Cheesecake','2019-08-29 00:18:45','2019-08-29 00:18:45');
-INSERT INTO `composizionemenu` (`menu`,`portata`,`data_creazione`,`data_aggiornamento`) VALUES 
+ ('Standard','GF Cheesecake','2019-08-29 00:18:45','2019-08-29 00:18:45'),
  ('Standard','GF Coratella di agnello con crescia','2019-08-29 00:18:45','2019-08-29 00:18:45'),
  ('Standard','GF Erba spadellata','2019-08-29 00:18:45','2019-08-29 00:18:45'),
  ('Standard','GF Galletto glassato al Miele e Senape con macedonia di verdure','2019-08-29 00:18:45','2019-08-29 00:18:45'),
@@ -141,8 +137,7 @@ INSERT INTO `composizionemenu` (`menu`,`portata`,`data_creazione`,`data_aggiorna
  ('Standard','GF Le Costine sfiziose dello Chef con patate al forno','2019-08-29 00:18:45','2019-08-29 00:18:45'),
  ('Standard','GF Lumache al sugo con erba spadellata','2019-08-29 00:18:45','2019-08-29 00:18:45'),
  ('Standard','GF Macedonia di Verdure','2019-08-29 00:18:45','2019-08-29 00:18:45'),
- ('Standard','GF Mezzemaniche all ortolana','2019-08-29 00:18:45','2019-08-29 00:18:45');
-INSERT INTO `composizionemenu` (`menu`,`portata`,`data_creazione`,`data_aggiornamento`) VALUES 
+ ('Standard','GF Mezzemaniche all ortolana','2019-08-29 00:18:45','2019-08-29 00:18:45'),
  ('Standard','GF Misticanza di bruschette','2019-08-29 00:18:45','2019-08-29 00:18:45'),
  ('Standard','GF Oca porchettata con patate al forno','2019-08-29 00:18:45','2019-08-29 00:18:45'),
  ('Standard','GF Pappa al Pomodoro con Burrata e Pesto di Basilico','2019-08-29 00:18:45','2019-08-29 00:18:45'),
@@ -153,8 +148,7 @@ INSERT INTO `composizionemenu` (`menu`,`portata`,`data_creazione`,`data_aggiorna
  ('Standard','GF Strangozzi alla Furente con Timo Serpullo','2019-08-29 00:18:45','2019-08-29 00:18:45'),
  ('Standard','GF Tagliatelle al ragu bianco di chianina','2019-08-29 00:18:45','2019-08-29 00:18:45'),
  ('Standard','GF Tagliere di salumi e formaggi Salumeria Pizzoni','2019-08-29 00:18:45','2019-08-29 00:18:45'),
- ('Standard','GF Tozzetti','2019-08-29 00:18:45','2019-08-29 00:18:45');
-INSERT INTO `composizionemenu` (`menu`,`portata`,`data_creazione`,`data_aggiornamento`) VALUES 
+ ('Standard','GF Tozzetti','2019-08-29 00:18:45','2019-08-29 00:18:45'),
  ('Standard','Gnocchi alla Contrastanga','2019-08-29 00:06:57','2019-08-29 00:06:57'),
  ('Standard','Gnocchi con fonduta di pecorino, zafferano e tartufo','2019-08-29 00:06:57','2019-08-29 00:06:57'),
  ('Standard','Guanciola di maiale al vino rosso con erba spadellata','2019-08-29 00:06:57','2019-08-29 00:06:57'),
@@ -165,8 +159,7 @@ INSERT INTO `composizionemenu` (`menu`,`portata`,`data_creazione`,`data_aggiorna
  ('Standard','Misticanza di bruschette','2019-08-29 00:06:57','2019-08-29 00:06:57'),
  ('Standard','Oca porchettata con patate al forno','2019-08-29 00:06:57','2019-08-29 00:06:57'),
  ('Standard','Pane e Coperto','2019-08-29 00:06:57','2019-08-29 00:06:57'),
- ('Standard','Pappa al Pomodoro con Burrata e Pesto di Basilico','2019-08-29 00:06:57','2019-08-29 00:06:57');
-INSERT INTO `composizionemenu` (`menu`,`portata`,`data_creazione`,`data_aggiornamento`) VALUES 
+ ('Standard','Pappa al Pomodoro con Burrata e Pesto di Basilico','2019-08-29 00:06:57','2019-08-29 00:06:57'),
  ('Standard','Pappardelle impastate al Cacao con ragu bianco di Cinghiale','2019-08-29 00:06:57','2019-08-29 00:06:57'),
  ('Standard','Patate arrosto','2019-08-29 00:06:57','2019-08-29 00:06:57'),
  ('Standard','Rocciata del Re servita con gelato alla Rocciata','2019-08-29 00:06:57','2019-08-29 00:06:57'),
@@ -177,8 +170,7 @@ INSERT INTO `composizionemenu` (`menu`,`portata`,`data_creazione`,`data_aggiorna
  ('Standard','Tozzetti e Acchiappafemmine','2019-08-29 00:06:57','2019-08-29 00:06:57'),
  ('Standard','Vino Arneto Trebbiano Spoletino','2019-08-29 00:06:57','2019-08-29 00:06:57'),
  ('Standard','Vino Bianco Umbria MILZIADE ANTANO','2019-08-29 00:06:57','2019-08-29 00:06:57'),
- ('Standard','Vino Grechetto di Montefalco','2019-08-29 00:06:57','2019-08-29 00:06:57');
-INSERT INTO `composizionemenu` (`menu`,`portata`,`data_creazione`,`data_aggiornamento`) VALUES 
+ ('Standard','Vino Grechetto di Montefalco','2019-08-29 00:06:57','2019-08-29 00:06:57'),
  ('Standard','Vino Greco di Renabianca Grechetto','2019-08-29 00:06:57','2019-08-29 00:06:57'),
  ('Standard','Vino Malot','2019-08-29 00:06:57','2019-08-29 00:06:57'),
  ('Standard','Vino Montefalco Rosso MILZIADE ANTANO','2019-08-29 00:06:57','2019-08-29 00:06:57'),
@@ -193,7 +185,7 @@ INSERT INTO `composizionemenu` (`menu`,`portata`,`data_creazione`,`data_aggiorna
 
 
 --
--- Table structure for table `gestionale_sett2020`.`composizioneportata`
+-- Definition of table `composizioneportata`
 --
 
 DROP TABLE IF EXISTS `composizioneportata`;
@@ -210,7 +202,7 @@ CREATE TABLE `composizioneportata` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `gestionale_sett2020`.`composizioneportata`
+-- Dumping data for table `composizioneportata`
 --
 
 /*!40000 ALTER TABLE `composizioneportata` DISABLE KEYS */;
@@ -218,7 +210,7 @@ CREATE TABLE `composizioneportata` (
 
 
 --
--- Table structure for table `gestionale_sett2020`.`materieprime`
+-- Definition of table `materieprime`
 --
 
 DROP TABLE IF EXISTS `materieprime`;
@@ -231,7 +223,7 @@ CREATE TABLE `materieprime` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `gestionale_sett2020`.`materieprime`
+-- Dumping data for table `materieprime`
 --
 
 /*!40000 ALTER TABLE `materieprime` DISABLE KEYS */;
@@ -239,7 +231,7 @@ CREATE TABLE `materieprime` (
 
 
 --
--- Table structure for table `gestionale_sett2020`.`menu`
+-- Definition of table `menu`
 --
 
 DROP TABLE IF EXISTS `menu`;
@@ -254,7 +246,7 @@ CREATE TABLE `menu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `gestionale_sett2020`.`menu`
+-- Dumping data for table `menu`
 --
 
 /*!40000 ALTER TABLE `menu` DISABLE KEYS */;
@@ -265,7 +257,7 @@ INSERT INTO `menu` (`id`,`nome_menu`,`data_creazione`,`data_aggiornamento`,`fiss
 
 
 --
--- Table structure for table `gestionale_sett2020`.`menuserata`
+-- Definition of table `menuserata`
 --
 
 DROP TABLE IF EXISTS `menuserata`;
@@ -281,7 +273,7 @@ CREATE TABLE `menuserata` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `gestionale_sett2020`.`menuserata`
+-- Dumping data for table `menuserata`
 --
 
 /*!40000 ALTER TABLE `menuserata` DISABLE KEYS */;
@@ -289,7 +281,7 @@ CREATE TABLE `menuserata` (
 
 
 --
--- Table structure for table `gestionale_sett2020`.`ordini`
+-- Definition of table `ordini`
 --
 
 DROP TABLE IF EXISTS `ordini`;
@@ -313,7 +305,7 @@ CREATE TABLE `ordini` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `gestionale_sett2020`.`ordini`
+-- Dumping data for table `ordini`
 --
 
 /*!40000 ALTER TABLE `ordini` DISABLE KEYS */;
@@ -321,7 +313,7 @@ CREATE TABLE `ordini` (
 
 
 --
--- Table structure for table `gestionale_sett2020`.`portata`
+-- Definition of table `portata`
 --
 
 DROP TABLE IF EXISTS `portata`;
@@ -336,7 +328,7 @@ CREATE TABLE `portata` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `gestionale_sett2020`.`portata`
+-- Dumping data for table `portata`
 --
 
 /*!40000 ALTER TABLE `portata` DISABLE KEYS */;
@@ -351,8 +343,7 @@ INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_cre
  (63,'Bianco Pietramala 2017 calice','cantinetta','3.00','2019-08-28 23:37:21','2019-08-28 23:37:21'),
  (58,'Birra Corona','cantinetta','3.00','2019-08-28 23:37:21','2019-08-28 23:37:21'),
  (56,'Birra Franziskaner','cantinetta','4.50','2019-08-28 23:37:21','2019-08-28 23:37:21'),
- (59,'Birra ichnusa non filtrata','cantinetta','3.50','2019-08-28 23:37:21','2019-08-28 23:37:21');
-INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_creazione`,`data_aggiornamento`) VALUES 
+ (59,'Birra ichnusa non filtrata','cantinetta','3.50','2019-08-28 23:37:21','2019-08-28 23:37:21'),
  (61,'Birra Moretti','cantinetta','4.00','2019-08-28 23:37:21','2019-08-28 23:37:21'),
  (60,'Birra Moretti rossa','cantinetta','3.50','2019-08-28 23:37:21','2019-08-28 23:37:21'),
  (57,'Birra Paulaner','cantinetta','3.50','2019-08-28 23:37:21','2019-08-28 23:37:21'),
@@ -361,8 +352,7 @@ INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_cre
  (3,'Bruschetta ai fichi con Prosciutto di Norcia IGP','bruschette e crostoni','5.00','2019-08-28 23:32:27','2019-08-28 23:33:25'),
  (3,'Bruschetta ai fichi con Prosciutto di Norcia IGP FISSO','bruschette e crostoni','5.00','2019-08-28 23:32:27','2019-08-28 23:33:25'),
  (2,'Bruschetta all olio EVO Bio Clarici con prosciutto di Norcia IGP','bruschette e crostoni','4.50','2019-08-28 23:34:19','2019-08-28 23:37:00'),
- (2,'Bruschetta all olio EVO Bio Clarici con prosciutto di Norcia IGP FISSO','bruschette e crostoni','4.50','2019-08-28 23:34:19','2019-08-28 23:37:00');
-INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_creazione`,`data_aggiornamento`) VALUES 
+ (2,'Bruschetta all olio EVO Bio Clarici con prosciutto di Norcia IGP FISSO','bruschette e crostoni','4.50','2019-08-28 23:34:19','2019-08-28 23:37:00'),
  (4,'Bruschetta con Ciauscolo e Pecorino','antipasto','5.00','2019-08-28 23:35:04','2019-08-28 23:35:04'),
  (4,'Bruschetta con Ciauscolo e Pecorino FISSO','antipasto','5.00','2019-08-28 23:35:04','2019-08-28 23:35:04'),
  (25,'Cheesecake','dolce','5.00','2019-08-28 23:45:10','2019-08-28 23:45:10'),
@@ -372,8 +362,7 @@ INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_cre
  (47,'Crescia con erba e salsiccia','cantinetta','4.50','2019-08-28 23:37:21','2019-08-28 23:37:21'),
  (45,'Crescia con formaggio','cantinetta','3.50','2019-08-28 23:37:21','2019-08-28 23:37:21'),
  (43,'Crescia con prosciutto','cantinetta','3.50','2019-08-28 23:37:21','2019-08-28 23:37:21'),
- (46,'Crescia con prosciutto e rucola','cantinetta','4.50','2019-08-28 23:37:21','2019-08-28 23:37:21');
-INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_creazione`,`data_aggiornamento`) VALUES 
+ (46,'Crescia con prosciutto e rucola','cantinetta','4.50','2019-08-28 23:37:21','2019-08-28 23:37:21'),
  (44,'Crescia con prosciutto e scamorza','cantinetta','4.00','2019-08-28 23:37:21','2019-08-28 23:37:21'),
  (48,'Crescia con prosciutto, stracchino e rucola','cantinetta','4.50','2019-08-28 23:37:21','2019-08-28 23:37:21'),
  (55,'Crescia con salame piccante, stracchino','cantinetta','4.00','2019-08-28 23:37:21','2019-08-28 23:37:21'),
@@ -382,8 +371,7 @@ INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_cre
  (52,'Crescia piccante','cantinetta','3.50','2019-08-28 23:37:21','2019-08-28 23:37:21'),
  (53,'Crescia salame piccante e scamorsa','cantinetta','4.00','2019-08-28 23:37:21','2019-08-28 23:37:21'),
  (51,'Crescia stracchino e prosciutto','cantinetta','4.00','2019-08-28 23:37:21','2019-08-28 23:37:21'),
- (50,'Crescia stracchino e rucola','cantinetta','4.00','2019-08-28 23:37:21','2019-08-28 23:37:21');
-INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_creazione`,`data_aggiornamento`) VALUES 
+ (50,'Crescia stracchino e rucola','cantinetta','4.00','2019-08-28 23:37:21','2019-08-28 23:37:21'),
  (22,'Erba spadellata','contorno','3.50','2019-08-28 23:42:59','2019-08-28 23:44:03'),
  (22,'Erba spadellata FISSO','contorno','3.50','2019-08-28 23:42:59','2019-08-28 23:44:03'),
  (19,'Galletto glassato al Miele e Senape con macedonia di verdure','secondo','7.50','2019-08-28 23:41:22','2019-08-28 23:41:22'),
@@ -392,8 +380,7 @@ INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_cre
  (6,'GF Antipasto Sette Selle FISSO','antipasto','5.50','2019-08-28 23:35:04','2019-08-28 23:35:04'),
  (17,'GF Bocconcini di Vitello ai funghi misti del bosco','secondo','8.50','2019-08-28 23:40:33','2019-08-28 23:40:33'),
  (17,'GF Bocconcini di Vitello ai funghi misti del bosco FISSO','secondo','8.50','2019-08-28 23:40:33','2019-08-28 23:40:33'),
- (3,'GF Bruschetta ai fichi con Prosciutto di Norcia IGP','bruschette e crostoni','5.00','2019-08-28 23:32:27','2019-08-28 23:33:25');
-INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_creazione`,`data_aggiornamento`) VALUES 
+ (3,'GF Bruschetta ai fichi con Prosciutto di Norcia IGP','bruschette e crostoni','5.00','2019-08-28 23:32:27','2019-08-28 23:33:25'),
  (3,'GF Bruschetta ai fichi con Prosciutto di Norcia IGP FISSO','bruschette e crostoni','5.00','2019-08-28 23:32:27','2019-08-28 23:33:25'),
  (2,'GF Bruschetta all olio EVO Bio Clarici con prosciutto di Norcia IGP','bruschette e crostoni','4.50','2019-08-28 23:34:19','2019-08-28 23:37:00'),
  (2,'GF Bruschetta all olio EVO Bio Clarici con prosciutto di Norcia IGP FISSO','bruschette e crostoni','4.50','2019-08-28 23:34:19','2019-08-28 23:37:00'),
@@ -402,8 +389,7 @@ INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_cre
  (25,'GF Cheesecake','dolce','5.00','2019-08-28 23:45:10','2019-08-28 23:45:10'),
  (25,'GF Cheesecake FISSO','dolce','5.00','2019-08-28 23:45:10','2019-08-28 23:45:10'),
  (7,'GF Coratella di agnello con crescia','antipasto','7.50','2019-08-28 23:35:47','2019-08-28 23:35:47'),
- (7,'GF Coratella di agnello con crescia FISSO','antipasto','7.50','2019-08-28 23:35:47','2019-08-28 23:35:47');
-INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_creazione`,`data_aggiornamento`) VALUES 
+ (7,'GF Coratella di agnello con crescia FISSO','antipasto','7.50','2019-08-28 23:35:47','2019-08-28 23:35:47'),
  (22,'GF Erba spadellata','contorno','3.50','2019-08-28 23:42:59','2019-08-28 23:44:03'),
  (22,'GF Erba spadellata FISSO','contorno','3.50','2019-08-28 23:42:59','2019-08-28 23:44:03'),
  (19,'GF Galletto glassato al Miele e Senape con macedonia di verdure','secondo','7.50','2019-08-28 23:41:22','2019-08-28 23:41:22'),
@@ -412,8 +398,7 @@ INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_cre
  (13,'GF Gnocchi alla Contrastanga FISSO','primo','7.50','2019-08-28 23:39:05','2019-08-28 23:39:05'),
  (14,'GF Gnocchi con fonduta di pecorino, zafferano e tartufo','primo','9.00','2019-08-28 23:39:25','2019-08-28 23:39:25'),
  (14,'GF Gnocchi con fonduta di pecorino, zafferano e tartufo FISSO','primo','9.00','2019-08-28 23:39:25','2019-08-28 23:39:25'),
- (16,'GF Guanciola di maiale al vino rosso con erba spadellata','secondo','8.50','2019-08-28 23:40:12','2019-08-28 23:40:12');
-INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_creazione`,`data_aggiornamento`) VALUES 
+ (16,'GF Guanciola di maiale al vino rosso con erba spadellata','secondo','8.50','2019-08-28 23:40:12','2019-08-28 23:40:12'),
  (16,'GF Guanciola di maiale al vino rosso con erba spadellata FISSO','secondo','8.50','2019-08-28 23:40:12','2019-08-28 23:40:12'),
  (15,'GF Le Costine sfiziose dello Chef con patate al forno','secondo','9.00','2019-08-28 23:39:46','2019-08-28 23:39:46'),
  (15,'GF Le Costine sfiziose dello Chef con patate al forno FISSO','secondo','9.00','2019-08-28 23:39:46','2019-08-28 23:39:46'),
@@ -422,8 +407,7 @@ INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_cre
  (23,'GF Macedonia di Verdure','contorno','3.50','2019-08-28 23:43:49','2019-08-28 23:43:49'),
  (23,'GF Macedonia di Verdure FISSO','contorno','3.50','2019-08-28 23:43:49','2019-08-28 23:43:49'),
  (11,'GF Mezzemaniche all ortolana','primo','6.50','2019-08-28 23:38:09','2019-08-28 23:38:09'),
- (11,'GF Mezzemaniche all ortolana FISSO','primo','6.50','2019-08-28 23:38:09','2019-08-28 23:38:09');
-INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_creazione`,`data_aggiornamento`) VALUES 
+ (11,'GF Mezzemaniche all ortolana FISSO','primo','6.50','2019-08-28 23:38:09','2019-08-28 23:38:09'),
  (3,'GF Misticanza di bruschette','bruschette e crostoni','4.50','2019-08-28 23:33:40','2019-08-28 23:33:40'),
  (3,'GF Misticanza di bruschette FISSO','bruschette e crostoni','4.50','2019-08-28 23:33:40','2019-08-28 23:33:40'),
  (18,'GF Oca porchettata con patate al forno','secondo','8.50','2019-08-28 23:40:50','2019-08-28 23:40:50'),
@@ -432,8 +416,7 @@ INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_cre
  (5,'GF Pappa al Pomodoro con Burrata e Pesto di Basilico FISSO','antipasto','5.00','2019-08-28 23:34:44','2019-08-28 23:34:44'),
  (14,'GF Pappardelle impastate al Cacao con ragu bianco di Cinghiale','primo','8.00','2019-08-28 23:39:25','2019-08-28 23:39:25'),
  (14,'GF Pappardelle impastate al Cacao con ragu bianco di Cinghiale FISSO','primo','8.00','2019-08-28 23:39:25','2019-08-28 23:39:25'),
- (21,'GF Patate arrosto','contorno','3.50','2019-08-28 23:42:40','2019-08-28 23:42:40');
-INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_creazione`,`data_aggiornamento`) VALUES 
+ (21,'GF Patate arrosto','contorno','3.50','2019-08-28 23:42:40','2019-08-28 23:42:40'),
  (21,'GF Patate arrosto FISSO','contorno','3.50','2019-08-28 23:42:40','2019-08-28 23:42:40'),
  (27,'GF Rocciata del Re','dolce','7.00','2019-08-28 23:46:18','2019-08-28 23:46:18'),
  (27,'GF Rocciata del Re FISSO','dolce','7.00','2019-08-28 23:46:18','2019-08-28 23:46:18'),
@@ -443,8 +426,7 @@ INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_cre
  (10,'GF Strangozzi alla Furente con Timo Serpullo FISSO','primo','6.50','2019-08-28 23:37:43','2019-08-28 23:37:43'),
  (12,'GF Tagliatelle al ragu bianco di chianina','primo','7.50','2019-08-28 23:38:45','2019-08-28 23:38:45'),
  (12,'GF Tagliatelle al ragu bianco di chianina FISSO','primo','7.50','2019-08-28 23:38:45','2019-08-28 23:38:45'),
- (8,'GF Tagliere di salumi e formaggi Salumeria Pizzoni','antipasto','8.00','2019-08-28 23:36:35','2019-08-28 23:36:35');
-INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_creazione`,`data_aggiornamento`) VALUES 
+ (8,'GF Tagliere di salumi e formaggi Salumeria Pizzoni','antipasto','8.00','2019-08-28 23:36:35','2019-08-28 23:36:35'),
  (8,'GF Tagliere di salumi e formaggi Salumeria Pizzoni FISSO','antipasto','8.00','2019-08-28 23:36:35','2019-08-28 23:36:35'),
  (24,'GF Tozzetti','dolce','4.50','2019-08-28 23:44:38','2019-08-28 23:44:38'),
  (24,'GF Tozzetti FISSO','dolce','4.50','2019-08-28 23:44:38','2019-08-28 23:44:38'),
@@ -454,8 +436,7 @@ INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_cre
  (14,'Gnocchi con fonduta di pecorino, zafferano e tartufo FISSO','primo','9.00','2019-08-28 23:39:25','2019-08-28 23:39:25'),
  (16,'Guanciola di maiale al vino rosso con erba spadellata','secondo','8.50','2019-08-28 23:40:12','2019-08-28 23:40:12'),
  (16,'Guanciola di maiale al vino rosso con erba spadellata FISSO','secondo','8.50','2019-08-28 23:40:12','2019-08-28 23:40:12'),
- (15,'Le Costine sfiziose dello Chef con patate al forno','secondo','9.00','2019-08-28 23:39:46','2019-08-28 23:39:46');
-INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_creazione`,`data_aggiornamento`) VALUES 
+ (15,'Le Costine sfiziose dello Chef con patate al forno','secondo','9.00','2019-08-28 23:39:46','2019-08-28 23:39:46'),
  (15,'Le Costine sfiziose dello Chef con patate al forno FISSO','secondo','9.00','2019-08-28 23:39:46','2019-08-28 23:39:46'),
  (20,'Lumache al sugo con erba spadellata','secondo','10.00','2019-08-28 23:41:43','2019-08-28 23:41:43'),
  (20,'Lumache al sugo con erba spadellata FISSO','secondo','10.00','2019-08-28 23:41:43','2019-08-28 23:41:43'),
@@ -465,8 +446,7 @@ INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_cre
  (11,'Mezzemaniche all ortolana FISSO','primo','6.50','2019-08-28 23:38:09','2019-08-28 23:38:09'),
  (3,'Misticanza di bruschette','bruschette e crostoni','4.50','2019-08-28 23:33:40','2019-08-28 23:33:40'),
  (3,'Misticanza di bruschette FISSO','bruschette e crostoni','4.50','2019-08-28 23:33:40','2019-08-28 23:33:40'),
- (69,'Montefalco Rosso 2016 Milziade Antano','cantinetta','16.00','2019-08-28 23:37:21','2019-08-28 23:37:21');
-INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_creazione`,`data_aggiornamento`) VALUES 
+ (69,'Montefalco Rosso 2016 Milziade Antano','cantinetta','16.00','2019-08-28 23:37:21','2019-08-28 23:37:21'),
  (65,'Montefalco Rosso 2016 Milziade Antano calice','cantinetta','4.00','2019-08-28 23:37:21','2019-08-28 23:37:21'),
  (18,'Oca porchettata con patate al forno','secondo','8.50','2019-08-28 23:40:50','2019-08-28 23:40:50'),
  (18,'Oca porchettata con patate al forno FISSO','secondo','8.50','2019-08-28 23:40:50','2019-08-28 23:40:50'),
@@ -475,8 +455,7 @@ INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_cre
  (5,'Pappa al Pomodoro con Burrata e Pesto di Basilico FISSO','antipasto','5.00','2019-08-28 23:34:44','2019-08-28 23:34:44'),
  (14,'Pappardelle impastate al Cacao con ragu bianco di Cinghiale','primo','8.00','2019-08-28 23:39:25','2019-08-28 23:39:25'),
  (14,'Pappardelle impastate al Cacao con ragu bianco di Cinghiale FISSO','primo','8.00','2019-08-28 23:39:25','2019-08-28 23:39:25'),
- (21,'Patate arrosto','contorno','3.50','2019-08-28 23:42:40','2019-08-28 23:42:40');
-INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_creazione`,`data_aggiornamento`) VALUES 
+ (21,'Patate arrosto','contorno','3.50','2019-08-28 23:42:40','2019-08-28 23:42:40'),
  (21,'Patate arrosto FISSO','contorno','3.50','2019-08-28 23:42:40','2019-08-28 23:42:40'),
  (66,'Prosecco','cantinetta','12.00','2019-08-28 23:37:21','2019-08-28 23:37:21'),
  (62,'Prosecco calice','cantinetta','3.00','2019-08-28 23:37:21','2019-08-28 23:37:21'),
@@ -486,8 +465,7 @@ INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_cre
  (64,'Rosso Roccascossa 2017 calice','cantinetta','3.00','2019-08-28 23:37:21','2019-08-28 23:37:21'),
  (26,'Semifreddo Fichi e Noci','dolce','5.00','2019-08-28 23:45:33','2019-08-28 23:45:48'),
  (26,'Semifreddo Fichi e Noci FISSO','dolce','5.00','2019-08-28 23:45:33','2019-08-28 23:45:48'),
- (10,'Strangozzi alla Furente con Timo Serpullo','primo','6.50','2019-08-28 23:37:43','2019-08-28 23:37:43');
-INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_creazione`,`data_aggiornamento`) VALUES 
+ (10,'Strangozzi alla Furente con Timo Serpullo','primo','6.50','2019-08-28 23:37:43','2019-08-28 23:37:43'),
  (10,'Strangozzi alla Furente con Timo Serpullo FISSO','primo','6.50','2019-08-28 23:37:43','2019-08-28 23:37:43'),
  (12,'Tagliatelle al ragu bianco di chianina','primo','7.50','2019-08-28 23:38:45','2019-08-28 23:38:45'),
  (12,'Tagliatelle al ragu bianco di chianina FISSO','primo','7.50','2019-08-28 23:38:45','2019-08-28 23:38:45'),
@@ -497,8 +475,7 @@ INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_cre
  (24,'Tozzetti e Acchiappafemmine FISSO','dolce','4.50','2019-08-28 23:44:38','2019-08-28 23:44:38'),
  (39,'Vino Arneto Trebbiano Spoletino','bevanda','19.50','2019-08-28 23:59:15','2019-08-28 23:59:15'),
  (39,'Vino Arneto Trebbiano Spoletino FISSO','bevanda','19.50','2019-08-28 23:59:15','2019-08-28 23:59:15'),
- (37,'Vino Bianco Umbria MILZIADE ANTANO','bevanda','11.00','2019-08-28 23:57:55','2019-08-28 23:58:13');
-INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_creazione`,`data_aggiornamento`) VALUES 
+ (37,'Vino Bianco Umbria MILZIADE ANTANO','bevanda','11.00','2019-08-28 23:57:55','2019-08-28 23:58:13'),
  (37,'Vino Bianco Umbria MILZIADE ANTANO FISSO','bevanda','11.00','2019-08-28 23:57:55','2019-08-28 23:58:13'),
  (36,'Vino Grechetto di Montefalco','bevanda','10.50','2019-08-28 23:57:32','2019-08-28 23:57:32'),
  (36,'Vino Grechetto di Montefalco FISSO','bevanda','10.50','2019-08-28 23:57:32','2019-08-28 23:57:32'),
@@ -508,8 +485,7 @@ INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_cre
  (42,'Vino Malot FISSO','bevanda','15.00','2019-08-28 23:53:29','2019-08-28 23:59:43'),
  (43,'Vino Montefalco Rosso MILZIADE ANTANO','bevanda','16.00','2019-08-28 23:54:15','2019-08-28 23:59:47'),
  (43,'Vino Montefalco Rosso MILZIADE ANTANO FISSO','bevanda','16.00','2019-08-28 23:54:15','2019-08-28 23:59:47'),
- (45,'Vino Montefalco Rosso Riserva MILZIADE ANTANO','bevanda','25.00','2019-08-29 00:01:31','2019-08-29 00:01:31');
-INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_creazione`,`data_aggiornamento`) VALUES 
+ (45,'Vino Montefalco Rosso Riserva MILZIADE ANTANO','bevanda','25.00','2019-08-29 00:01:31','2019-08-29 00:01:31'),
  (45,'Vino Montefalco Rosso Riserva MILZIADE ANTANO FISSO','bevanda','25.00','2019-08-29 00:01:31','2019-08-29 00:01:31'),
  (44,'Vino Montefalco Sagrantino BIO PLANI ARCHE','bevanda','20.50','2019-08-28 23:56:50','2019-08-28 23:59:51'),
  (44,'Vino Montefalco Sagrantino BIO PLANI ARCHE FISSO','bevanda','20.50','2019-08-28 23:56:50','2019-08-28 23:59:51'),
@@ -519,15 +495,14 @@ INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_cre
  (40,'Vino Roccascossa FISSO','bevanda','8.00','2019-08-29 00:01:04','2019-08-29 00:01:04'),
  (41,'Vino Rosso Umbria IGT SCACCIADIAVOLI','bevanda','10.50','2019-08-28 23:53:07','2019-08-28 23:59:39'),
  (41,'Vino Rosso Umbria IGT SCACCIADIAVOLI FISSO','bevanda','10.50','2019-08-28 23:53:07','2019-08-28 23:59:39'),
- (42,'Vino Sagrantino passito DOCG 2011','bevanda','20.00','2019-08-28 23:53:07','2019-08-28 23:59:39');
-INSERT INTO `portata` (`id`,`nome_portata`,`categoria`,`prezzo_finale`,`data_creazione`,`data_aggiornamento`) VALUES 
+ (42,'Vino Sagrantino passito DOCG 2011','bevanda','20.00','2019-08-28 23:53:07','2019-08-28 23:59:39'),
  (9,'Zuppa di Ceci e Lagane','primo','5.00','2019-08-28 23:37:21','2019-08-28 23:37:21'),
  (9,'Zuppa di Ceci e Lagane FISSO','primo','5.00','2019-08-28 23:37:21','2019-08-28 23:37:21');
 /*!40000 ALTER TABLE `portata` ENABLE KEYS */;
 
 
 --
--- Table structure for table `gestionale_sett2020`.`prenotazioni`
+-- Definition of table `prenotazioni`
 --
 
 DROP TABLE IF EXISTS `prenotazioni`;
@@ -538,7 +513,7 @@ CREATE TABLE `prenotazioni` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `gestionale_sett2020`.`prenotazioni`
+-- Dumping data for table `prenotazioni`
 --
 
 /*!40000 ALTER TABLE `prenotazioni` DISABLE KEYS */;
@@ -546,7 +521,7 @@ CREATE TABLE `prenotazioni` (
 
 
 --
--- Table structure for table `gestionale_sett2020`.`programmazioneordini`
+-- Definition of table `programmazioneordini`
 --
 
 DROP TABLE IF EXISTS `programmazioneordini`;
@@ -572,7 +547,7 @@ CREATE TABLE `programmazioneordini` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `gestionale_sett2020`.`programmazioneordini`
+-- Dumping data for table `programmazioneordini`
 --
 
 /*!40000 ALTER TABLE `programmazioneordini` DISABLE KEYS */;
@@ -580,7 +555,7 @@ CREATE TABLE `programmazioneordini` (
 
 
 --
--- Table structure for table `gestionale_sett2020`.`quantitapiattiserata`
+-- Definition of table `quantitapiattiserata`
 --
 
 DROP TABLE IF EXISTS `quantitapiattiserata`;
@@ -597,7 +572,7 @@ CREATE TABLE `quantitapiattiserata` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `gestionale_sett2020`.`quantitapiattiserata`
+-- Dumping data for table `quantitapiattiserata`
 --
 
 /*!40000 ALTER TABLE `quantitapiattiserata` DISABLE KEYS */;
@@ -605,7 +580,7 @@ CREATE TABLE `quantitapiattiserata` (
 
 
 --
--- Table structure for table `gestionale_sett2020`.`responsabili`
+-- Definition of table `responsabili`
 --
 
 DROP TABLE IF EXISTS `responsabili`;
@@ -617,7 +592,7 @@ CREATE TABLE `responsabili` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `gestionale_sett2020`.`responsabili`
+-- Dumping data for table `responsabili`
 --
 
 /*!40000 ALTER TABLE `responsabili` DISABLE KEYS */;
@@ -636,8 +611,7 @@ INSERT INTO `responsabili` (`nome`,`data_creazione`,`data_aggiornamento`) VALUES
  ('Francesca Amodeo','2016-05-31 13:02:33','2016-05-31 13:02:33'),
  ('Francesca Faccendini','2016-05-31 13:02:33','2016-05-31 13:02:33'),
  ('Francesca Filippini','2019-05-30 14:00:51','2019-05-30 14:00:51'),
- ('Gioulia x','2018-06-01 15:54:05','2018-06-01 15:54:05');
-INSERT INTO `responsabili` (`nome`,`data_creazione`,`data_aggiornamento`) VALUES 
+ ('Gioulia x','2018-06-01 15:54:05','2018-06-01 15:54:05'),
  ('Lavinia Pinchi','2016-05-31 13:02:33','2016-05-31 13:02:33'),
  ('Leonardo Belloni','2018-06-01 15:52:25','2018-06-01 15:52:25'),
  ('Leonardo Cecconi','2019-05-30 13:58:50','2019-05-30 13:58:50'),
@@ -652,8 +626,7 @@ INSERT INTO `responsabili` (`nome`,`data_creazione`,`data_aggiornamento`) VALUES
  ('Simone Striano','2017-09-01 13:17:01','2017-09-01 13:17:01'),
  ('Sofia Ferri','2018-06-01 15:52:45','2018-06-01 15:52:45'),
  ('Tommaso Carini','2016-06-01 10:08:52','2016-06-01 10:08:52'),
- ('Tommaso Mariani','2018-06-01 15:54:54','2018-06-01 15:54:54');
-INSERT INTO `responsabili` (`nome`,`data_creazione`,`data_aggiornamento`) VALUES 
+ ('Tommaso Mariani','2018-06-01 15:54:54','2018-06-01 15:54:54'),
  ('Virginia Squadroni','2019-05-31 16:00:00','2019-05-31 16:00:00'),
  ('Virginia Vagaggini','2018-09-01 17:52:26','2018-09-01 17:52:26'),
  ('Virginia Volpi','2018-09-05 17:25:38','2018-09-05 17:25:38');
@@ -661,7 +634,7 @@ INSERT INTO `responsabili` (`nome`,`data_creazione`,`data_aggiornamento`) VALUES
 
 
 --
--- Table structure for table `gestionale_sett2020`.`responsabiliserata`
+-- Definition of table `responsabiliserata`
 --
 
 DROP TABLE IF EXISTS `responsabiliserata`;
@@ -681,7 +654,7 @@ CREATE TABLE `responsabiliserata` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `gestionale_sett2020`.`responsabiliserata`
+-- Dumping data for table `responsabiliserata`
 --
 
 /*!40000 ALTER TABLE `responsabiliserata` DISABLE KEYS */;
@@ -689,7 +662,7 @@ CREATE TABLE `responsabiliserata` (
 
 
 --
--- Table structure for table `gestionale_sett2020`.`ricevutefiscali`
+-- Definition of table `ricevutefiscali`
 --
 
 DROP TABLE IF EXISTS `ricevutefiscali`;
@@ -703,7 +676,7 @@ CREATE TABLE `ricevutefiscali` (
 ) ENGINE=InnoDB AUTO_INCREMENT=25711 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `gestionale_sett2020`.`ricevutefiscali`
+-- Dumping data for table `ricevutefiscali`
 --
 
 /*!40000 ALTER TABLE `ricevutefiscali` DISABLE KEYS */;
@@ -735,8 +708,7 @@ INSERT INTO `ricevutefiscali` (`n_ric`,`serata`,`tavolo`,`indice`,`totale`) VALU
  (25575,'2019-05-31',115,1,NULL),
  (25576,'2019-05-31',113,2,NULL),
  (25577,'2019-05-31',118,1,NULL),
- (25578,'2019-06-01',101,1,NULL);
-INSERT INTO `ricevutefiscali` (`n_ric`,`serata`,`tavolo`,`indice`,`totale`) VALUES 
+ (25578,'2019-06-01',101,1,NULL),
  (25579,'2019-06-01',206,1,NULL),
  (25581,'2019-06-01',402,1,NULL),
  (25582,'2019-06-01',102,1,NULL),
@@ -764,8 +736,7 @@ INSERT INTO `ricevutefiscali` (`n_ric`,`serata`,`tavolo`,`indice`,`totale`) VALU
  (25606,'2019-06-01',106,1,NULL),
  (25607,'2019-06-01',403,1,NULL),
  (25608,'2019-06-01',104,1,NULL),
- (25609,'2019-06-01',404,2,NULL);
-INSERT INTO `ricevutefiscali` (`n_ric`,`serata`,`tavolo`,`indice`,`totale`) VALUES 
+ (25609,'2019-06-01',404,2,NULL),
  (25610,'2019-06-01',115,2,NULL),
  (25611,'2019-06-01',116,1,NULL),
  (25612,'2019-06-01',105,3,NULL),
@@ -794,8 +765,7 @@ INSERT INTO `ricevutefiscali` (`n_ric`,`serata`,`tavolo`,`indice`,`totale`) VALU
  (25632,'2019-06-04',202,1,NULL),
  (25633,'2019-06-04',205,1,NULL),
  (25634,'2019-06-04',301,1,NULL),
- (25635,'2019-06-04',303,1,NULL);
-INSERT INTO `ricevutefiscali` (`n_ric`,`serata`,`tavolo`,`indice`,`totale`) VALUES 
+ (25635,'2019-06-04',303,1,NULL),
  (25636,'2019-06-04',108,1,NULL),
  (25637,'2019-06-04',113,1,NULL),
  (25638,'2019-06-04',206,1,NULL),
@@ -823,8 +793,7 @@ INSERT INTO `ricevutefiscali` (`n_ric`,`serata`,`tavolo`,`indice`,`totale`) VALU
  (25660,'2019-06-05',113,1,NULL),
  (25661,'2019-06-05',110,1,NULL),
  (25662,'2019-06-05',108,1,NULL),
- (25663,'2019-06-06',0,0,15);
-INSERT INTO `ricevutefiscali` (`n_ric`,`serata`,`tavolo`,`indice`,`totale`) VALUES 
+ (25663,'2019-06-06',0,0,15),
  (25664,'2019-06-06',0,0,15),
  (25665,'2019-06-07',0,0,14),
  (25666,'2019-06-07',0,0,14),
@@ -853,8 +822,7 @@ INSERT INTO `ricevutefiscali` (`n_ric`,`serata`,`tavolo`,`indice`,`totale`) VALU
  (25689,'2019-06-06',307,1,NULL),
  (25690,'2019-06-06',111,1,NULL),
  (25691,'2019-06-06',404,2,NULL),
- (25692,'2019-06-06',203,1,NULL);
-INSERT INTO `ricevutefiscali` (`n_ric`,`serata`,`tavolo`,`indice`,`totale`) VALUES 
+ (25692,'2019-06-06',203,1,NULL),
  (25693,'2019-06-07',309,1,NULL),
  (25694,'2019-06-07',905,1,NULL),
  (25695,'2019-06-07',703,1,NULL),
@@ -877,7 +845,7 @@ INSERT INTO `ricevutefiscali` (`n_ric`,`serata`,`tavolo`,`indice`,`totale`) VALU
 
 
 --
--- Table structure for table `gestionale_sett2020`.`serata`
+-- Definition of table `serata`
 --
 
 DROP TABLE IF EXISTS `serata`;
@@ -891,7 +859,7 @@ CREATE TABLE `serata` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `gestionale_sett2020`.`serata`
+-- Dumping data for table `serata`
 --
 
 /*!40000 ALTER TABLE `serata` DISABLE KEYS */;
@@ -899,7 +867,7 @@ CREATE TABLE `serata` (
 
 
 --
--- Table structure for table `gestionale_sett2020`.`statoordine`
+-- Definition of table `statoordine`
 --
 
 DROP TABLE IF EXISTS `statoordine`;
@@ -910,7 +878,7 @@ CREATE TABLE `statoordine` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `gestionale_sett2020`.`statoordine`
+-- Dumping data for table `statoordine`
 --
 
 /*!40000 ALTER TABLE `statoordine` DISABLE KEYS */;
@@ -922,7 +890,7 @@ INSERT INTO `statoordine` (`id`,`stato`) VALUES
 
 
 --
--- Table structure for table `gestionale_sett2020`.`tavoli`
+-- Definition of table `tavoli`
 --
 
 DROP TABLE IF EXISTS `tavoli`;
@@ -938,7 +906,7 @@ CREATE TABLE `tavoli` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `gestionale_sett2020`.`tavoli`
+-- Dumping data for table `tavoli`
 --
 
 /*!40000 ALTER TABLE `tavoli` DISABLE KEYS */;
@@ -957,8 +925,7 @@ INSERT INTO `tavoli` (`numero_tavolo`,`zona`,`posti`,`data_creazione`,`data_aggi
  (12,'Via Umberto I',9,'2018-09-15 15:24:29','2018-09-15 15:24:29'),
  (13,'Via Umberto I',9,'2018-09-15 15:25:07','2018-09-15 15:25:07'),
  (14,'Via Umberto I',9,'2018-09-15 15:25:33','2018-09-15 15:25:33'),
- (15,'Via Umberto I',9,'2018-09-15 15:26:07','2018-09-15 15:26:07');
-INSERT INTO `tavoli` (`numero_tavolo`,`zona`,`posti`,`data_creazione`,`data_aggiornamento`) VALUES 
+ (15,'Via Umberto I',9,'2018-09-15 15:26:07','2018-09-15 15:26:07'),
  (16,'Via Umberto I',9,'2018-09-15 15:26:34','2018-09-15 15:26:34'),
  (17,'Via Umberto I',9,'2018-09-15 15:27:02','2018-09-15 15:27:02'),
  (18,'Via Umberto I',9,'2018-09-15 15:27:36','2018-09-15 15:27:36'),
@@ -972,8 +939,7 @@ INSERT INTO `tavoli` (`numero_tavolo`,`zona`,`posti`,`data_creazione`,`data_aggi
  (108,'Giardino grande',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
  (109,'Giardino grande',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
  (110,'Giardino grande',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
- (111,'Giardino grande',10,'2018-08-20 20:03:37','2018-08-20 20:03:37');
-INSERT INTO `tavoli` (`numero_tavolo`,`zona`,`posti`,`data_creazione`,`data_aggiornamento`) VALUES 
+ (111,'Giardino grande',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
  (112,'Giardino grande',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
  (113,'Giardino grande',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
  (114,'Giardino grande',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
@@ -987,8 +953,7 @@ INSERT INTO `tavoli` (`numero_tavolo`,`zona`,`posti`,`data_creazione`,`data_aggi
  (202,'Giardino piccolo',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
  (203,'Giardino piccolo',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
  (204,'Giardino piccolo',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
- (205,'Giardino piccolo',10,'2018-08-20 20:03:37','2018-08-20 20:03:37');
-INSERT INTO `tavoli` (`numero_tavolo`,`zona`,`posti`,`data_creazione`,`data_aggiornamento`) VALUES 
+ (205,'Giardino piccolo',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
  (206,'Giardino piccolo',10,'2018-09-01 18:54:13','2018-09-01 18:54:13'),
  (301,'Piazzetta',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
  (302,'Piazzetta',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
@@ -1002,8 +967,7 @@ INSERT INTO `tavoli` (`numero_tavolo`,`zona`,`posti`,`data_creazione`,`data_aggi
  (401,'Corridoio giardino',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
  (402,'Corridoio giardino',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
  (403,'Corridoio giardino',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
- (404,'Corridoio giardino',10,'2018-08-20 20:03:37','2018-08-20 20:03:37');
-INSERT INTO `tavoli` (`numero_tavolo`,`zona`,`posti`,`data_creazione`,`data_aggiornamento`) VALUES 
+ (404,'Corridoio giardino',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
  (405,'Corridoio giardino',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
  (406,'Corridoio giardino',6,'2018-09-14 17:45:50','2018-09-14 17:45:50'),
  (501,'Stanza 2 dx',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
@@ -1017,8 +981,7 @@ INSERT INTO `tavoli` (`numero_tavolo`,`zona`,`posti`,`data_creazione`,`data_aggi
  (604,'Stanza 1 dx',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
  (701,'Stanza 1 sx',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
  (702,'Stanza 1 sx',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
- (703,'Stanza 1 sx',10,'2018-08-20 20:03:37','2018-08-20 20:03:37');
-INSERT INTO `tavoli` (`numero_tavolo`,`zona`,`posti`,`data_creazione`,`data_aggiornamento`) VALUES 
+ (703,'Stanza 1 sx',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
  (801,'Stanza 2 sx',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
  (802,'Stanza 2 sx',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
  (803,'Stanza 2 sx',10,'2018-08-20 20:03:37','2018-08-20 20:03:37'),
@@ -1034,7 +997,7 @@ INSERT INTO `tavoli` (`numero_tavolo`,`zona`,`posti`,`data_creazione`,`data_aggi
 
 
 --
--- Table structure for table `gestionale_sett2020`.`utente`
+-- Definition of table `utente`
 --
 
 DROP TABLE IF EXISTS `utente`;
@@ -1052,7 +1015,7 @@ CREATE TABLE `utente` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `gestionale_sett2020`.`utente`
+-- Dumping data for table `utente`
 --
 
 /*!40000 ALTER TABLE `utente` DISABLE KEYS */;
@@ -1063,7 +1026,7 @@ INSERT INTO `utente` (`username`,`password`,`gruppo`,`nome`,`cognome`,`email`,`t
 
 
 --
--- Table structure for table `gestionale_sett2020`.`zone`
+-- Definition of table `zone`
 --
 
 DROP TABLE IF EXISTS `zone`;
@@ -1075,7 +1038,7 @@ CREATE TABLE `zone` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `gestionale_sett2020`.`zone`
+-- Dumping data for table `zone`
 --
 
 /*!40000 ALTER TABLE `zone` DISABLE KEYS */;
@@ -1091,6 +1054,78 @@ INSERT INTO `zone` (`zona`,`data_creazione`,`data_aggiornamento`) VALUES
  ('Stanza 2 sx','2018-08-20 20:03:37','2018-08-20 20:03:37'),
  ('Via Umberto I','2018-06-15 17:47:25','2018-06-15 17:47:25');
 /*!40000 ALTER TABLE `zone` ENABLE KEYS */;
+
+
+
+-- Dump della struttura di trigger gestionale_sett2019.orders_schedule_trigger
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DELIMITER //
+CREATE TRIGGER `orders_schedule_trigger` AFTER INSERT ON `ordini` FOR EACH ROW BEGIN
+DECLARE iterator INT DEFAULT 0;
+DECLARE cat ENUM('bevanda','piadina','bruschette e crostoni','pane e coperto','antipasto','primo','secondo','contorno','dolce','cantinetta');
+
+
+SELECT categoria into cat FROM portata where nome_portata=NEW.portata;
+
+IF cat = 'pane e coperto' OR cat= 'bevanda'  THEN
+	WHILE iterator < NEW.quantita DO
+		INSERT INTO programmazioneordini (serata, portata, tavolo, indice, stato, categoria) VALUES 
+		(NEW.serata, NEW.portata, NEW.tavolo, NEW.indice,2, cat);
+		SET iterator = iterator + 1;
+	END WHILE;
+END IF;
+IF cat != 'cantinetta' THEN
+	WHILE iterator < NEW.quantita DO
+		INSERT INTO programmazioneordini (serata, portata, tavolo, indice, stato, categoria) VALUES 
+		(NEW.serata, NEW.portata, NEW.tavolo, NEW.indice,1, cat);
+		SET iterator = iterator + 1;
+	END WHILE;
+END IF;
+
+END//
+DELIMITER ;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
+
+-- Dump della struttura di trigger gestionale_sett2019.orders_schedule_trigger_update
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DELIMITER //
+CREATE TRIGGER `orders_schedule_trigger_update` AFTER UPDATE ON `ordini` FOR EACH ROW BEGIN
+DECLARE iterator INT DEFAULT 0;
+DECLARE cat ENUM('bevanda','piadina','bruschette e crostoni','pane e coperto','antipasto','primo','secondo','contorno','dolce','cantinetta');
+
+
+SELECT categoria into cat FROM portata where nome_portata=NEW.portata;
+IF ((NEW.quantita - OLD.quantita) > 0) THEN
+	IF cat = 'pane e coperto' OR cat= 'bevanda'  THEN
+		WHILE (iterator < (NEW.quantita - OLD.quantita)) DO
+		     INSERT INTO programmazioneordini (serata, portata, tavolo, indice, stato, categoria) VALUES 
+			  (NEW.serata, NEW.portata, NEW.tavolo, NEW.indice,2, cat);
+		     SET iterator = iterator + 1;
+		END WHILE;
+	END IF;
+	IF cat != 'cantinetta' THEN
+		WHILE (iterator < (NEW.quantita - OLD.quantita)) DO
+		     INSERT INTO programmazioneordini (serata, portata, tavolo, indice, stato, categoria) VALUES 
+			  (NEW.serata, NEW.portata, NEW.tavolo, NEW.indice,1, 'secondo');
+		     SET iterator = iterator + 1;
+		END WHILE;
+	END IF;
+ELSE
+	WHILE (iterator < (OLD.quantita - NEW.quantita)) DO
+		DELETE FROM programmazioneordini WHERE serata = NEW.serata 
+		AND portata = NEW.portata
+		AND tavolo = NEW.tavolo
+		AND indice = NEW.indice
+		LIMIT 1;
+
+     	SET iterator = iterator + 1;
+	END WHILE;
+END IF;
+
+
+END//
+DELIMITER ;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
