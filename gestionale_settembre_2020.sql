@@ -1063,6 +1063,7 @@ DELIMITER //
 CREATE TRIGGER `orders_schedule_trigger` AFTER INSERT ON `ordini` FOR EACH ROW BEGIN
 DECLARE iterator INT DEFAULT 0;
 DECLARE cat ENUM('bevanda','piadina','bruschette e crostoni','pane e coperto','antipasto','primo','secondo','contorno','dolce','cantinetta');
+DECLARE _cat varchar;
 
 
 SELECT categoria into cat FROM portata where nome_portata=NEW.portata;
@@ -1076,8 +1077,15 @@ IF cat = 'pane e coperto' OR cat= 'bevanda'  THEN
 END IF;
 IF cat != 'cantinetta' THEN
 	WHILE iterator < NEW.quantita DO
+		_ cat = cat;
+		if cat = 'bruschette e crostoni' then 
+			_cat = 'antipasto';
+		end if;
+		if cat = 'contorno' then 
+			_cat = 'secondo';
+		end if;
 		INSERT INTO programmazioneordini (serata, portata, tavolo, indice, stato, categoria) VALUES 
-		(NEW.serata, NEW.portata, NEW.tavolo, NEW.indice,1, cat);
+		(NEW.serata, NEW.portata, NEW.tavolo, NEW.indice,1, _cat);
 		SET iterator = iterator + 1;
 	END WHILE;
 END IF;
@@ -1092,6 +1100,7 @@ DELIMITER //
 CREATE TRIGGER `orders_schedule_trigger_update` AFTER UPDATE ON `ordini` FOR EACH ROW BEGIN
 DECLARE iterator INT DEFAULT 0;
 DECLARE cat ENUM('bevanda','piadina','bruschette e crostoni','pane e coperto','antipasto','primo','secondo','contorno','dolce','cantinetta');
+DECLARE _cat varchar;
 
 
 SELECT categoria into cat FROM portata where nome_portata=NEW.portata;
@@ -1105,8 +1114,15 @@ IF ((NEW.quantita - OLD.quantita) > 0) THEN
 	END IF;
 	IF cat != 'cantinetta' THEN
 		WHILE (iterator < (NEW.quantita - OLD.quantita)) DO
+			_ cat = cat;
+			if cat = 'bruschette e crostoni' then 
+				_cat = 'antipasto';
+			end if;
+			if cat = 'contorno' then 
+				_cat = 'secondo';
+			end if;
 		     INSERT INTO programmazioneordini (serata, portata, tavolo, indice, stato, categoria) VALUES 
-			  (NEW.serata, NEW.portata, NEW.tavolo, NEW.indice,1, 'secondo');
+			  (NEW.serata, NEW.portata, NEW.tavolo, NEW.indice,1, _cat);
 		     SET iterator = iterator + 1;
 		END WHILE;
 	END IF;
