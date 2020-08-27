@@ -1063,7 +1063,6 @@ DELIMITER //
 CREATE TRIGGER `orders_schedule_trigger` AFTER INSERT ON `ordini` FOR EACH ROW BEGIN
 DECLARE iterator INT DEFAULT 0;
 DECLARE cat ENUM('bevanda','piadina','bruschette e crostoni','pane e coperto','antipasto','primo','secondo','contorno','dolce','cantinetta');
-DECLARE _cat varchar;
 
 
 SELECT categoria into cat FROM portata where nome_portata=NEW.portata;
@@ -1074,18 +1073,22 @@ IF cat = 'pane e coperto' OR cat= 'bevanda'  THEN
 		(NEW.serata, NEW.portata, NEW.tavolo, NEW.indice,2, cat);
 		SET iterator = iterator + 1;
 	END WHILE;
-END IF;
-IF cat != 'cantinetta' THEN
+ELSEIF cat = 'bruschette e crostoni'  THEN
 	WHILE iterator < NEW.quantita DO
-		_ cat = cat;
-		if cat = 'bruschette e crostoni' then 
-			_cat = 'antipasto';
-		end if;
-		if cat = 'contorno' then 
-			_cat = 'secondo';
-		end if;
 		INSERT INTO programmazioneordini (serata, portata, tavolo, indice, stato, categoria) VALUES 
-		(NEW.serata, NEW.portata, NEW.tavolo, NEW.indice,1, _cat);
+		(NEW.serata, NEW.portata, NEW.tavolo, NEW.indice,2, 'antipasto');
+		SET iterator = iterator + 1;
+	END WHILE;
+ELSEIF cat = 'contorno'  THEN
+	WHILE iterator < NEW.quantita DO
+		INSERT INTO programmazioneordini (serata, portata, tavolo, indice, stato, categoria) VALUES 
+		(NEW.serata, NEW.portata, NEW.tavolo, NEW.indice,2, 'secondo');
+		SET iterator = iterator + 1;
+	END WHILE;
+ELSEIF cat != 'cantinetta' THEN
+	WHILE iterator < NEW.quantita DO
+		INSERT INTO programmazioneordini (serata, portata, tavolo, indice, stato, categoria) VALUES 
+		(NEW.serata, NEW.portata, NEW.tavolo, NEW.indice,1, cat);
 		SET iterator = iterator + 1;
 	END WHILE;
 END IF;
@@ -1100,7 +1103,6 @@ DELIMITER //
 CREATE TRIGGER `orders_schedule_trigger_update` AFTER UPDATE ON `ordini` FOR EACH ROW BEGIN
 DECLARE iterator INT DEFAULT 0;
 DECLARE cat ENUM('bevanda','piadina','bruschette e crostoni','pane e coperto','antipasto','primo','secondo','contorno','dolce','cantinetta');
-DECLARE _cat varchar;
 
 
 SELECT categoria into cat FROM portata where nome_portata=NEW.portata;
@@ -1111,18 +1113,22 @@ IF ((NEW.quantita - OLD.quantita) > 0) THEN
 			  (NEW.serata, NEW.portata, NEW.tavolo, NEW.indice,2, cat);
 		     SET iterator = iterator + 1;
 		END WHILE;
-	END IF;
-	IF cat != 'cantinetta' THEN
+	ELSEIF cat = 'bruschette e crostoni' then 
 		WHILE (iterator < (NEW.quantita - OLD.quantita)) DO
-			_ cat = cat;
-			if cat = 'bruschette e crostoni' then 
-				_cat = 'antipasto';
-			end if;
-			if cat = 'contorno' then 
-				_cat = 'secondo';
-			end if;
 		     INSERT INTO programmazioneordini (serata, portata, tavolo, indice, stato, categoria) VALUES 
-			  (NEW.serata, NEW.portata, NEW.tavolo, NEW.indice,1, _cat);
+			  (NEW.serata, NEW.portata, NEW.tavolo, NEW.indice,1, 'antipasto');
+		     SET iterator = iterator + 1;
+		END WHILE;
+	ELSEIF cat = 'contorno' then 
+		WHILE (iterator < (NEW.quantita - OLD.quantita)) DO
+		     INSERT INTO programmazioneordini (serata, portata, tavolo, indice, stato, categoria) VALUES 
+			  (NEW.serata, NEW.portata, NEW.tavolo, NEW.indice,1, 'secondo');
+		     SET iterator = iterator + 1;
+		END WHILE;
+	ELSEIF cat != 'cantinetta' THEN
+		WHILE (iterator < (NEW.quantita - OLD.quantita)) DO		
+		     INSERT INTO programmazioneordini (serata, portata, tavolo, indice, stato, categoria) VALUES 
+			  (NEW.serata, NEW.portata, NEW.tavolo, NEW.indice,1, cat);
 		     SET iterator = iterator + 1;
 		END WHILE;
 	END IF;
