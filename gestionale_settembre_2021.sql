@@ -15,11 +15,11 @@
 
 
 --
--- Create schema gestionale_giu2021
+-- Create schema gestionale_sett2021
 --
 
-CREATE DATABASE IF NOT EXISTS gestionale_giu2021;
-USE gestionale_giu2021;
+CREATE DATABASE IF NOT EXISTS gestionale_sett2021;
+USE gestionale_sett2021;
 
 --
 -- Definition of table `comande`
