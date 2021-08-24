@@ -15,11 +15,11 @@
 
 
 --
--- Create schema gestionale_sett2021
+-- Create schema gestionale_giu2021
 --
 
-CREATE DATABASE IF NOT EXISTS gestionale_sett2021;
-USE gestionale_sett2021;
+CREATE DATABASE IF NOT EXISTS gestionale_giu2021;
+USE gestionale_giu2021;
 
 --
 -- Definition of table `comande`
@@ -1122,7 +1122,7 @@ INSERT INTO `zone` (`zona`,`data_creazione`,`data_aggiornamento`) VALUES
 
 
 
--- Dump della struttura di trigger gestionale_sett2021.orders_schedule_trigger
+-- Dump della struttura di trigger gestionale_sett2019.orders_schedule_trigger
 SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `orders_schedule_trigger` AFTER INSERT ON `ordini` FOR EACH ROW BEGIN
@@ -1162,7 +1162,7 @@ END//
 DELIMITER ;
 SET SQL_MODE=@OLDTMP_SQL_MODE;
 
--- Dump della struttura di trigger gestionale_sett2021.orders_schedule_trigger_update
+-- Dump della struttura di trigger gestionale_sett2019.orders_schedule_trigger_update
 SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `orders_schedule_trigger_update` AFTER UPDATE ON `ordini` FOR EACH ROW BEGIN
