@@ -600,8 +600,6 @@ CREATE TABLE `programmazioneordini` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `categoria` varchar(50) NOT NULL,
-  `ora_produzione` timestamp,
-  `ora_evasione` timestamp,
   PRIMARY KEY (`id`),
   KEY `FK_programmazioneordini_serata` (`serata`),
   KEY `FK_programmazioneordini_portata` (`portata`),
